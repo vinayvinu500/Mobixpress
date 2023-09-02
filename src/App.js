@@ -65,7 +65,7 @@ function App() {
                                     <p>We are committed to providing exceptional service and stand behind the quality of our repairs. That’s why we offer a 100% warranty on every repair we undertake. Your satisfaction is our utmost priority, and we strive to exceed your expectations with every interaction.</p>
                                 </div>
                                 <div className="service">
-                                    <h3>Doorstep Pickup and Delivery</h3>
+                                    <h3>Doorstep Pickup & Delivery</h3>
                                     <p>EmobiXpress takes pride in offering a seamless and hassle-free experience. With our online mobile repairing booking system, you can easily schedule an appointment at your convenience. Our doorstep pickup and delivery services save you time and effort, allowing you to get your device repaired without leaving the comfort of your home.</p>
                                 </div>
                                 <div className="service">
