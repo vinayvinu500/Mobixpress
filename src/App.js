@@ -61,12 +61,16 @@ function App() {
                                 <h2>Exclusive Services</h2>
                                 <div className="service">
                                     <img src="/service1.jpg" alt="Fast Repair Service" />
-                                    <h3>Fast Repair</h3>
-                                    <p>Quality service in under an hour.</p>
+                                    <h3>100 Days Warranty*</h3>
+                                    <p>We are committed to providing exceptional service and stand behind the quality of our repairs. That’s why we offer a 100% warranty on every repair we undertake. Your satisfaction is our utmost priority, and we strive to exceed your expectations with every interaction.</p>
                                 </div>
                                 <div className="service">
-                                    <h3>Doorstep Delivery</h3>
-                                    <p>We pick, repair, and deliver.</p>
+                                    <h3>Doorstep Pickup & Delivery</h3>
+                                    <p>EmobiXpress takes pride in offering a seamless and hassle-free experience. With our online mobile repairing booking system, you can easily schedule an appointment at your convenience. Our doorstep pickup and delivery services save you time and effort, allowing you to get your device repaired without leaving the comfort of your home.</p>
+                                </div>
+                                <div className="service">
+                                    <h3>5+ Outlets in Alwar City</h3>
+                                    <p>Building upon the solid foundation of our 10-year-old establishment, MobiXpress, EmobiXpress is our digital expansion aimed at providing even more convenience and accessibility to our valued customers. With a team of highly skilled technicians, state-of-the-art equipment, and a customer-centric approach, we are dedicated to delivering top-notch repair services.</p>
                                 </div>
                             </section>
 
