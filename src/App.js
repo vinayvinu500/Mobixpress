@@ -19,15 +19,23 @@ function App() {
 
     return (
         <Router>
-            <div className="App">
-                <nav className="navbar">
-                    <span className="brand">Mobixpress</span>
-                    <div className="nav-links">
-                        <Link to="/">Home</Link>
-                        <Link to="/about">About Us</Link>
-                        <Link to="/contact">Contact</Link>
-                    </div>
-                </nav>
+          <div className="App">
+            <nav className="navbar">
+              <span className="brand">Mobixpress</span>
+              <div className="nav-links">
+                <Link to="/">Home</Link>
+                <Link to="/about">About Us</Link>
+                <Link to="/contact">Contact</Link>
+                <div className="login-dropdown">
+                  <button className="dropbtn">Login</button>
+                  <div className="dropdown-content">
+                    <Link to="/login/customer">Customer</Link>
+                    <Link to="/login/vendor">Vendor</Link>
+                    <Link to="/login/delivery">Delivery Executive</Link>
+                  </div>
+                </div>
+              </div>
+            </nav>
 
                 <Routes>
                     <Route path="/" element={
