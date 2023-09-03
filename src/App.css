@@ -29,7 +29,7 @@
   text-align: center;
 }
 
-.about, .services, .testimonials, .phone-selection {
+.phone-selection, .services, .testimonials {
   padding: 4rem 5%;
   text-align: center;
 }
@@ -43,13 +43,12 @@
 .phone-selection .search-button {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: #333;
   color: #FFF;
   text-decoration: none;
   border-radius: 5px;
 }
 
-.service {
+.services .service {
   display: inline-block;
   width: 45%;
   margin: 1%;
@@ -59,14 +58,14 @@
   border-radius: 5px;
 }
 
-.service img {
+.services .service img {
   max-width: 200px;
   height: auto;
   margin: 0 auto;
   display: block;
 }
 
-.testimonial {
+.testimonials .testimonial {
   background-color: #FFF;
   padding: 2rem;
   margin: 1rem 0;
@@ -87,7 +86,7 @@
   align-items: center;
 }
 
-.social-media a img {
+.footer-content .social-media a img {
   width: 30px;
   height: 30px;
   margin: 0 10px;
@@ -102,7 +101,7 @@
     margin: 10px 0;
   }
 
-  .service {
+  .services .service {
     display: block;
     width: 100%;
   }
@@ -122,7 +121,7 @@
     margin: 0 10px;
   }
 
-  .service {
+  .services .service {
     width: 48%;
   }
 }
@@ -133,7 +132,7 @@
     margin-left: 20px;
   }
 
-  .service {
+  .services .service {
     width: 45%;
   }
 }

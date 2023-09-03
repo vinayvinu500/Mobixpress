@@ -7,11 +7,19 @@ function App() {
     const [brand, setBrand] = useState('');
     const [model, setModel] = useState('');
 
+    const models = {
+        apple: ['iPhone 12', 'iPhone 11', 'iPhone X'],
+        samsung: ['Galaxy S21', 'Galaxy S20', 'Galaxy Note 20'],
+    };
+
+    const handleBrandChange = (e) => {
+        setBrand(e.target.value);
+        setModel('');
+    };
+
     return (
         <Router>
             <div className="App">
-
-                {/* Navigation Bar */}
                 <nav className="navbar">
                     <span className="brand">Mobixpress</span>
                     <div className="nav-links">
@@ -21,42 +29,34 @@ function App() {
                     </div>
                 </nav>
 
-                {/* Routes */}
                 <Routes>
                     <Route path="/" element={
                         <div>
-                            {/* Main Header */}
                             <header className="App-header">
                                 <h1>Elevate Your Mobile Repair Experience</h1>
                                 <p>Your trusted partner for all mobile repair solutions.</p>
                             </header>
 
-                            {/* About Us Component */}
-                            <About />
-
-                            {/* Phone Selection */}
                             <section className="phone-selection">
                                 <h2>Select Your Phone</h2>
                                 <div className="dropdowns">
-                                    <select onChange={(e) => setBrand(e.target.value)}>
+                                    <select onChange={handleBrandChange}>
                                         <option value="">Select brand</option>
                                         <option value="apple">Apple</option>
                                         <option value="samsung">Samsung</option>
-                                        {/* add other brands */}
                                     </select>
                                     <select onChange={(e) => setModel(e.target.value)}>
                                         <option value="">Select model</option>
-                                        <option value="iphone12">iPhone 12</option>
-                                        <option value="galaxyS21">Galaxy S21</option>
-                                        {/* add other models */}
+                                        {brand && models[brand] && models[brand].map((model, index) => (
+                                            <option key={index} value={model.toLowerCase().replace(/\s+/g, '')}>{model}</option>
+                                        ))}
                                     </select>
                                 </div>
-                                <Link to={`/services/${brand}/${model}`} className="search-button">
+                                <Link to={brand && model ? `/services/${brand}/${model}` : '#'} className="search-button" style={{ backgroundColor: brand && model ? '#333' : '#ccc', pointerEvents: brand && model ? 'auto' : 'none' }}>
                                     Search
                                 </Link>
                             </section>
 
-                            {/* Our Services */}
                             <section className="services">
                                 <h2>Exclusive Services</h2>
                                 <div className="service">
@@ -74,7 +74,6 @@ function App() {
                                 </div>
                             </section>
 
-                            {/* Testimonials */}
                             <section className="testimonials">
                                 <h2>Client Testimonials</h2>
                                 <div className="testimonial">
@@ -83,7 +82,6 @@ function App() {
                                 </div>
                             </section>
 
-                            {/* Footer */}
                             <footer className="App-footer">
                                 <div className="footer-content">
                                     <p>&copy; 2023 Mobixpress - All rights reserved.</p>
